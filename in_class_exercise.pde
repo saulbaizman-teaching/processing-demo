@@ -56,8 +56,15 @@ void my_code ( ) {
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
 
-  float circle_diameter = random ( 100, 200) ;
-  ellipse ( circle_diameter/2, circle_diameter/2, circle_diameter, circle_diameter) ;
+  float circle_diameter = 150 ;
+  
+  float x_coordinate = width / 4 ; // This is the gap between each circle.
+  
+  ellipse ( 0, circle_diameter/2, circle_diameter, circle_diameter) ;
+  ellipse ( x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
+  ellipse ( x_coordinate+x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
+  ellipse ( x_coordinate+x_coordinate+x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
+  ellipse ( x_coordinate+x_coordinate+x_coordinate+x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
 
 
 
