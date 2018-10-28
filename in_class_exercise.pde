@@ -55,7 +55,12 @@ void my_code ( ) {
 
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
-  ellipse ( 75, 75, 150, 150 ) ;
+
+  int circle_diameter = 150 ;
+  //ellipse ( 150/2, 150/2, 150, 150) ; // The x and y coordinates are always half of the width and height.
+  ellipse ( circle_diameter/2, circle_diameter/2, circle_diameter, circle_diameter) ;
+
+
 
   // +++ YOUR CODE GOES *ABOVE* THIS LINE. +++ //
 
