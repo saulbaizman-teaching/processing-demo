@@ -56,8 +56,7 @@ void my_code ( ) {
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
 
-  int circle_diameter = 150 ;
-  //ellipse ( 150/2, 150/2, 150, 150) ; // The x and y coordinates are always half of the width and height.
+  float circle_diameter = random ( 100, 200) ;
   ellipse ( circle_diameter/2, circle_diameter/2, circle_diameter, circle_diameter) ;
 
 
