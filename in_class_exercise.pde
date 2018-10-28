@@ -58,15 +58,20 @@ void my_code ( ) {
 
   float circle_diameter = 150 ;
   
-  float x_coordinate = width / 4 ; // This is the gap between each circle.
+  float horizontal_gap = width / 4 ; // This is the gap between each circle.
   
   fill (255,0,0) ; // fill ( red, green, blue ) ;
   noStroke() ;
-  ellipse ( 0, circle_diameter/2, circle_diameter, circle_diameter) ;
-  ellipse ( x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
-  ellipse ( x_coordinate+x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
-  ellipse ( x_coordinate+x_coordinate+x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
-  ellipse ( x_coordinate+x_coordinate+x_coordinate+x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
+
+  float x_coordinate = 0 ;
+  int counter = 0 ;
+  while ( counter < 5 ) {
+    ellipse ( x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
+    x_coordinate = x_coordinate + horizontal_gap ; // Increase the value of the x-coordinate by a gap.
+    counter = counter + 1 ; // Increase the counter by 1.
+  }
+  
+
 
 
 
