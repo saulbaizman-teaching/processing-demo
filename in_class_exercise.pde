@@ -60,7 +60,7 @@ void my_code ( ) {
   
   float x_coordinate = width / 4 ; // This is the gap between each circle.
   
-  fill (#ff0000) ;
+  fill (255,0,0) ; // fill ( red, green, blue ) ;
   noStroke() ;
   ellipse ( 0, circle_diameter/2, circle_diameter, circle_diameter) ;
   ellipse ( x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
