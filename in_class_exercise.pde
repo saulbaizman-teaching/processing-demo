@@ -55,7 +55,7 @@ void my_code ( ) {
 
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
-
+  ellipse ( 75, 75, 150, 150 ) ;
 
   // +++ YOUR CODE GOES *ABOVE* THIS LINE. +++ //
 
