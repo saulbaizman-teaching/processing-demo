@@ -60,7 +60,11 @@ void my_code ( ) {
   
   float horizontal_gap = width / 4 ; // This is the gap between each circle.
   
-  fill (255,0,0) ; // fill ( red, green, blue ) ;
+  float random_red = random ( 0, 255 ); // Select a decimal number between 0 and 255.
+  float random_green = random ( 0, 255 );
+  float random_blue = random ( 0, 255 ) ;
+  
+  fill (random_red,random_green,random_blue) ; // fill ( red, green, blue ) ;
   noStroke() ;
 
   float x_coordinate = 0 ;
