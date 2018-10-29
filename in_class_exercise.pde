@@ -56,7 +56,7 @@ void my_code ( ) {
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
 
-  float circle_diameter = 150 ;
+  float circle_diameter = random ( 100, 200 ) ;
 
   float horizontal_gap = width / 4 ; // This is the gap between each circle.
 
