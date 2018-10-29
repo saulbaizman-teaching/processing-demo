@@ -57,7 +57,7 @@ void my_code ( ) {
 
 
   int columns = ceil ( random (5, 13) ) ; // run the random decimal number up to the nearest whole number.
-  int rows = 5 ;
+  int rows = ceil ( random (5, 8) ) ;
   float circle_diameter = random ( 100, 200 ) ;
 
   float horizontal_gap = width / (columns-1) ; // This is the gap between each circle. Note that the divisor is always 1 less than the number of circles.
