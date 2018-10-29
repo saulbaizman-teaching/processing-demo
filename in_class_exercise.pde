@@ -56,10 +56,12 @@ void my_code ( ) {
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
 
-  int circle_count = ceil ( random (5, 13) ) ; // run the random decimal number up to the nearest whole number.
+  int columns = ceil ( random (5, 13) ) ; // run the random decimal number up to the nearest whole number.
+  int rows = 5 ;
   float circle_diameter = random ( 100, 200 ) ;
 
-  float horizontal_gap = width / (circle_count-1) ; // This is the gap between each circle. Note that the divisor is always 1 less than the number of circles.
+  float horizontal_gap = width / (columns-1) ; // This is the gap between each circle. Note that the divisor is always 1 less than the number of circles.
+  float vertical_gap = height / (rows-1) ;
 
   float random_red ; // Declare the variable, but don't assign a value.
   float random_green ;
@@ -68,9 +70,11 @@ void my_code ( ) {
   noStroke() ;
 
   float x_coordinate = 0 ;
-  int counter = 0 ;
-  while ( counter < circle_count ) {
-    
+  float y_coordinate = 0 ;
+  int column_counter = 0 ;
+  int row_counter = 0 ;
+  while ( column_counter < columns ) {
+
     // Note that the variables below don't include a data type.
     random_red = random ( 0, 255 ); // Select a decimal number between 0 and 255.
     random_green = random ( 0, 255 );
@@ -78,9 +82,25 @@ void my_code ( ) {
 
     fill (random_red, random_green, random_blue) ; // fill ( red, green, blue ) ;
 
-    ellipse ( x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
+    ellipse ( x_coordinate, y_coordinate, circle_diameter, circle_diameter) ;
     x_coordinate = x_coordinate + horizontal_gap ; // Increase the value of the x-coordinate by a gap.
-    counter = counter + 1 ; // Increase the counter by 1.
+    column_counter = column_counter + 1 ; // Increase the counter by 1.
+
+    // If we drew the last column...
+    if ( column_counter == columns) {
+
+      // If we are not drawing the last row...
+      if ( row_counter < rows ) {
+        
+        // add a new row
+        row_counter++ ;
+        y_coordinate = y_coordinate + vertical_gap ; // Increase the value of the x-coordinate by a gap.
+        
+        // start a new column
+        column_counter = 0 ;
+        x_coordinate = 0 ;
+      }
+    }
   }
 
 
