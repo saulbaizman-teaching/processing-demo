@@ -57,24 +57,31 @@ void my_code ( ) {
 
 
   float circle_diameter = 150 ;
-  
+
   float horizontal_gap = width / 4 ; // This is the gap between each circle.
-  
-  float random_red = random ( 0, 255 ); // Select a decimal number between 0 and 255.
-  float random_green = random ( 0, 255 );
-  float random_blue = random ( 0, 255 ) ;
-  
-  fill (random_red,random_green,random_blue) ; // fill ( red, green, blue ) ;
+
+  float random_red ; // Declare the variable, but don't assign a value.
+  float random_green ;
+  float random_blue ;
+
   noStroke() ;
 
   float x_coordinate = 0 ;
   int counter = 0 ;
   while ( counter < 5 ) {
+    
+    // Note that the variables below don't include a data type.
+    random_red = random ( 0, 255 ); // Select a decimal number between 0 and 255.
+    random_green = random ( 0, 255 );
+    random_blue = random ( 0, 255 ) ;
+
+    fill (random_red, random_green, random_blue) ; // fill ( red, green, blue ) ;
+
     ellipse ( x_coordinate, circle_diameter/2, circle_diameter, circle_diameter) ;
     x_coordinate = x_coordinate + horizontal_gap ; // Increase the value of the x-coordinate by a gap.
     counter = counter + 1 ; // Increase the counter by 1.
   }
-  
+
 
 
 
