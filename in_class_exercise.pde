@@ -56,9 +56,10 @@ void my_code ( ) {
   // +++ YOUR CODE GOES *BELOW* THIS LINE. +++ //
 
 
+  int circle_count = ceil ( random (5, 13) ) ; // run the random decimal number up to the nearest whole number.
   float circle_diameter = random ( 100, 200 ) ;
 
-  float horizontal_gap = width / 4 ; // This is the gap between each circle.
+  float horizontal_gap = width / (circle_count-1) ; // This is the gap between each circle. Note that the divisor is always 1 less than the number of circles.
 
   float random_red ; // Declare the variable, but don't assign a value.
   float random_green ;
@@ -68,7 +69,7 @@ void my_code ( ) {
 
   float x_coordinate = 0 ;
   int counter = 0 ;
-  while ( counter < 5 ) {
+  while ( counter < circle_count ) {
     
     // Note that the variables below don't include a data type.
     random_red = random ( 0, 255 ); // Select a decimal number between 0 and 255.
